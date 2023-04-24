@@ -18,18 +18,16 @@ int main(void)
 				{
 					putchar(a | 48);
 					putchar(',');
-					putchar(',');
 					putchar(b | 48);
 					putchar(',');
-					putchar(',');
 					putchar(c | 48);
-					putchar(',');
 					putchar(',');
 					putchar(d | 48);
 					putchar('\n');
 				}
 			}
 		}
-
-		return (0);
 	}
+
+	return (0);
+}
