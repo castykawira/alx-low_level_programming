@@ -3,29 +3,29 @@
 #include <time.h>
 
 /**
- * main - examine if the random number is greater than, less than, or 0 and then print the last digit
+ * main - prints the last digit of the random number indicating its sign
  * Return: Always 0
  */
 int main(void)
 {
 	int n;
-	int last_digit
+	int b;
+
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	last_digit = n % 10;
-	
-	if (last_digit > 5)
+	b = n % 10;
+	if (b > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
+		printf("Last digit of %d is %d and is greater than 5\n", n, b);
 	}
 	else if (last_digit == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, last_digit);
+		printf("Last digit of %d is %d and is 0\n", n, b;
 	}
 	else
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_digit);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, b);
 	}
 	return (0);
 }
