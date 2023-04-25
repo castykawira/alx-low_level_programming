@@ -12,19 +12,23 @@ int main(void)
 	{
 		for (n = m; n < 100; n++)
 		{
-			int num1 = m / 10;
-			int num2 = m % 10;
-			int num3 = n / 10;
-			int num4 = n % 10;
+			if (m <= 99 && n <= 99)
+			{
 
-			putchar(num1 + '0');
-			putchar(num2 + '0');
-			putchar(' ');
+				int num1 = m / 10;
+				int num2 = m % 10;
+				int num3 = n / 10;
+				int num4 = n % 10;
 
-			putchar(num3 + '0');
-			putchar(num4 + '0');
-			putchar(',');
-			putchar(' ');
+				putchar(num1 + '0');
+				putchar(num2 + '0');
+				putchar(' ');
+
+				putchar(num3 + '0');
+				putchar(num4 + '0');
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 
