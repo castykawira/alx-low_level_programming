@@ -26,8 +26,12 @@ int main(void)
 
 				putchar(num3 + '0');
 				putchar(num4 + '0');
-				putchar(',');
-				putchar(' ');
+
+				if (m != 98 || n != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
