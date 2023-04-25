@@ -10,9 +10,9 @@ int main(void)
 
 	for (m = 0; m < 100; m++)
 	{
-		for (n = m; n < 100; n++)
+		for (n = 0; n < 100; n++)
 		{
-			if (i < j)
+			if (n < m)
 			{
 				putchar(m / 10 + 48);
 				putchar(m % 10 + 48);
@@ -22,7 +22,7 @@ int main(void)
 				if (m != 98 || n != 99)
 				{
 					putchar(',');
-					putchar(' ');
+					putchar('');
 				}
 			}
 		}
@@ -31,4 +31,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
