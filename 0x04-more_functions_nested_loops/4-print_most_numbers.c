@@ -3,17 +3,21 @@
 /**
  * print_most_numbers - prints the numbers from 0 to 9 except 2 and 4
  *
- * return: void
+ * return: the numbers from 0 upto 9
  */
 void print_most_numbers(void)
 {
-	int c;
+	int i;
 
-	for (c = 0; c < 10; c++)
+	for (i = 0; i <= 9; i++)
 	{
-		if (c != 2 && c != 4)
+		if (i == 2 || i == 4)
 		{
-			 _putchar(c + '0');
+			continue;
+		}
+		else
+		{
+			_putchar(i + '0');
 		}
 	}
 	_putchar('\n');
