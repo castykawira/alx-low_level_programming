@@ -11,24 +11,27 @@ int main(void)
 
 	for (q = 1; q <= 100; q++)
 	{
-		if (q % 3 == 0 && q % 5 != 0)
+		if ((q % 3 == 0) && (q % 5 == 0))
+		{
+			printf("FizzBuzz");
+		}
+		else if (q % 3 == 0)
 		{
 			printf("Fizz");
 		}
-		else if (q % 5 == 0 && q % 3 != 0)
+		else if (q % 5 == 0)
 		{
 			printf("Buzz");
-		}
-		else if (q % 3 == 0 && q % 5 ==0)
-		{
-			printf("FizzBuzz");
 		}
 		else
 		{
 			printf("%d", q);
 		}
+		if (q != 100)
+		{
+			printf(" ");
+		}
 	}
-		printf("\n");
-		return (0);
-
+	printf("\n");
+	return (0);
 }
