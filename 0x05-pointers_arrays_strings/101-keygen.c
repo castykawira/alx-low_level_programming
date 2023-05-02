@@ -9,25 +9,22 @@
  */
 int main(void)
 {
-	char password[6];
-	int i, ascii_value;
+	int sum = 0, n;
+	srand(time(0));
+	char password[100];
 
-	srand(time(NULL));
-
-	for (i = 0; i < 5; i++)
+	for (int i = 0; sum < 2772 - 122; i++)
 	{
-		 ascii_value = rand() % 78 + 48;
-		  if (ascii_value >= 58 && ascii_value <= 64)
-			  i--;
-		  else if (ascii_value >= 91 && ascii_value <= 96)
-			   i--;
-		  else
-			   password[i] = (char) ascii_value;
+		 n = rand() % 127;
+		 if (n > 32)
+		 {
+			 password[i] = (char)n;
+			 sum += n;
+		 }
 	}
 
-	password[i] = '\0';
-
+	password[9] = (char)(2772 - sum);
+	password[10] = '\0';
 	printf("%s\n", password);
-
 	return (0);
 }
