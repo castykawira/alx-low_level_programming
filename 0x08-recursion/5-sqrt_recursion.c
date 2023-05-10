@@ -1,33 +1,34 @@
 #include "main.h"
 
-int actual_sqrt_recursion(int n, int a);
+int _sqrt(int n, int a);
 
 /**
  * _sqrt_recursion - a function that returns the natural square root of a number
  * @n: number to calculate the square root of
  *
- * Return: the resulting square root
+ * Return: the natural square root
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	return (actual_sqrt_recursion(n, 0));
+	return (_sqrt(n, 1));
 }
 
 /**
- * actual_sqrt_recursion - finds the square toot of a numbing
- * using recursion
+ *_sqrt_recursion - calculates the natural square root
  * @n: number to calculate the sqaure root of
- * @a: the current guess for the square root
+ * @a: iterate number
  *
- * Return: the resulting square root
+ * Return: the natural square root
  */
 int actual_sqrt_recursion(int n, int a)
 {
-	if (a * a > n)
+	int sqrt = a * a;
+
+	if (sqrt > n)
 		return (-1);
-	if (a * a == n)
+
+	if (sqrt == n)
 		return (a);
-	return (actual_sqrt_recursion(n, a + 1));
+
+	return (_sqrt(n, a + 1));
 }
