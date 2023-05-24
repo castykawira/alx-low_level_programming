@@ -5,12 +5,12 @@
  * print_name - Prints a name using a function pointer
  * @name: The name to be printed
  * @f: pointer to function that prints the name
- * Return: NULL if name or f is NULL, otherwise void
+ * Return: nothing
  **/
 void print_name(char *name, void (*f)(char *))
 {
 	 if (name == NULL || f == NULL)
-		 return NULL;
+		 return;
 
 	 f(name);
 }
