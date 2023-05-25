@@ -24,13 +24,13 @@ void print_all(const char * const format, ...)
 				case 'c':
 					printf("%s%c", sep, va_arg(args, int));
 					break;
-				case 'a':
+				case 'i':
 					printf("%s%d", sep, va_arg(args, int));
 					break;
 				case 'f':
 					printf("%s%f", sep, va_arg(args, double));
 					break;
-				case 'i':
+				case 's':
 					s = va_arg(args, char *);
 					if (!s)
 						s = "(nil)";
