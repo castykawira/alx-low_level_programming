@@ -9,8 +9,8 @@
  * @n: integer
  * @next: points to the next node
  *
- * Description: Structure representing a node 
- * in a singly linked list of integers
+ * Description: singly linked list node structure
+ * for ALX assignment
  */
 typedef struct listint_s
 {
