@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - a function that inserts a new node at a given position 
- * in a listint_t linked list
+ * insert_nodeint_at_index - a function that inserts a new node
+ * at a given position in a listint_t linked list
  * @head: Double pointer to the head of the linked list
  * @idx: Index of the list where the new node should be added
  * @n: Data value of the new node
