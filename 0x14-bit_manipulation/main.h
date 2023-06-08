@@ -6,5 +6,6 @@ void print_binary(unsigned long int n);
 int _putchar(char c);
 int clear_bit(unsigned long int *n, unsigned int index);
 int get_bit(unsigned long int n, unsigned int index);
+int get_bit(unsigned long int n, unsigned int index);
 
 #endif /* MAIN_H */
