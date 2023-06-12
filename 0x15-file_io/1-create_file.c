@@ -20,9 +20,10 @@ return (-1);
 
 if (text_content != NULL)
 ret = write(fd, text_content, strlen(text_content));
+
 else
 ret = write(fd, "", 0);
 close(fd);
 
-return (ret);
+return (1);
 }
