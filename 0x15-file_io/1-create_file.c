@@ -20,6 +20,11 @@ if (fd == -1)
 return (-1);
 
 if (text_content != NULL)
+{
+	for (text_length = 0; text_content[text_length];)
+		text_length++;
+}
+
 ret = write(fd, text_content, text_length);
 
 else
