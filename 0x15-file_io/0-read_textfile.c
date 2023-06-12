@@ -10,8 +10,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t nread;
-	char buf[BUFFER_SIZE];
+	char *buf;
+	ssize_t ret;
 
 	if (filename == NULL)
 		return (0);
@@ -20,18 +20,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	while (letters > 0)
-	{
-		nread = read(fd, buf, BUFFER_SIZE);
-		if (nread == -1)
-			break;
-		if (nread == 0)
-			break;
-		if (write(STDOUT_FILENO, buf, nread) != nread)
-			break;
-		letters -= nread;
+	buf = malloc(letters + 1);
+	 if (buf == NULL)
+		 return (0);
 
-	}
-	close(fd);
-	return (nread);
+	 rd = read(fd, buf, letters);
+	 if (rd == -1)
+		  return (0);
+
+	 buf[rd] = '\0';
+	 ret = write(STDOUT_FILENO, buf, rd);
+	 free(buf);
+	 close(fd);
+
+	 return (ret);
 }
