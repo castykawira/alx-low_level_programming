@@ -15,20 +15,20 @@ text_length = 0;
 if (filename == NULL)
 return (-1);
 
-fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-if (fd == -1)
-return (-1);
-
 if (text_content != NULL)
 {
-	for (text_length = 0; text_content[text_length];)
-		text_length++;
+for (text_length = 0; text_content[text_length];)
+text_length++;
 }
 
+fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 ret = write(fd, text_content, text_length);
 
+if (fd == -1)
+return (-1);
 else
 ret = write(fd, "", 0);
+
 close(fd);
 
 return (1);
