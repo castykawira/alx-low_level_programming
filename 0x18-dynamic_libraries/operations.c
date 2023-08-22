@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * add - Adds two integers and returns the result.
  * @a: The first integer.
@@ -13,7 +11,7 @@ int add(int a, int b)
 
 /**
  * subtract - Subtracts the second integer from the first
- * and returns the result
+ * and returns the result.
  * @a: The first integer.
  * @b: The second integer.
  * Return: The result of subtracting b from a.
@@ -42,5 +40,9 @@ int multiply(int a, int b)
  */
 int divide(int a, int b)
 {
-	return (a / b);
+	if (b == 0)
+	{
+		return (-1);
+	} else
+		return (a / b);
 }
