@@ -7,7 +7,6 @@
  * Return: The calculated hash value as an unsigned long int
  */
 unsigned long int hash_djb2(const unsigned char *str)
-unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
 	int count;
