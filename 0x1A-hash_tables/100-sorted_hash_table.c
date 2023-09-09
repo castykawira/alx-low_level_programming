@@ -12,13 +12,12 @@ shash_table_t *shash_table_create(unsigned long int size)
 	shash_table_t *new_table;
 	unsigned long int i;
 
-	new_table = malloc(sizeof(hash_table_t));
-
+	new_table = malloc(sizeof(shash_table_t));
 	if (new_table == NULL)
 		return (NULL);
 
 	new_table->size = size;
-	new_table->array = malloc(sizeof(hash_node_t *) * size);
+	new_table->array = malloc(sizeof(shash_node_t *) * size);
 
 	if (new_table->array == NULL)
 	{
@@ -124,7 +123,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  * Return: The value associated with the element,
  * or NULL if the key couldn't be found
  */
-char *shash_table_get(const hash_table_t *ht, const char *key)
+char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int index;
 	shash_node_t *current;
@@ -202,7 +201,7 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	hash_node_t *current, *temp;
+	shash_node_t *current, *temp;
 
 	if (ht == NULL)
 		return;
